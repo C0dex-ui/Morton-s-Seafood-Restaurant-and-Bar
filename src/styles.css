@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Mona Sans Condensed";
+  src: url("/fonts/MonaSansCondensed-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Mona Sans Condensed";
+  src: url("/fonts/MonaSansCondensed-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-primary: #b41f25;
+  --color-primary-deep: #a21b21;
+  --color-navy: #1b1b1b;
+  --color-navy-deep: #111111;
+  --color-ink: #5c5c5c;
+  --color-muted: #a9a8a7;
+  --color-paper: #faf9f7;
+  --color-mist: #f4f4f4;
+  --color-line: #eae7e5;
+  --color-gold: #ff9e0c;
+  --color-quote: #1b1b1b;
+  --color-snow: #ffffff;
+  --color-fg: #5c5c5c;
+  --color-bg: #faf9f7;
+  --font-sans: "Barlow Semi Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Mona Sans Condensed", "Barlow Semi Condensed", "Arial Narrow", sans-serif;
+  --font-script: Yellowtail, cursive;
+  --radius-btn: 4px;
+  --radius-card: 4px;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-quick: 150ms;
+  --motion-fast: 250ms;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    font-family: var(--font-sans);
+    color: var(--color-ink);
+    background: var(--color-bg);
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    text-wrap: balance;
+  }
+  p {
+    text-wrap: pretty;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled),
+  [role="tab"]:not(:disabled),
+  summary,
+  a {
+    cursor: pointer;
+  }
+  section[id] {
+    scroll-margin-top: 7.5rem;
+  }
+}
