@@ -60,7 +60,6 @@ function AboutBlock() {
             width={1200}
             height={900}
           />
-          <img className="ms-herb" src="/mortons/oysters.png" alt="" width={220} height={180} />
         </figure>
         <div>
           <p className="ms-script">About the house</p>
